@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>Index</title>
+  {% load static %}
+    <link rel = "stylesheet" href = "{% static 'css/bootstrap.min.css' %}"/>
+
+</head>
+
+<body>
+
+<form method="post" class = "post-form" action = "/std/">
+          {% csrf_token %}
+      <div class = "container">
+  <br>
+      <div class = "form-group row">
+      <lable class = "col-sm-1 col-form-lable"></lable>
+      <div class = "col-sm-4">
+      <h3>Enter Details</h3>
+      </div>
+    </div>
+        <div class = "form-group row">
+        <lable class = "col-sm-2 col-form-label">Students Rollno:</lable>
+        <div class=" col-sm-4">
+          {{ form.RollNo }}
+        </div>
+    </div>
+
+        <div class = "form-group row">
+        <lable class = "col-sm-2 col-form-label">Name:</lable>
+        <div class=" col-sm-4">
+          {{ form.Name }}
+        </div>
+    </div>
+
+        <div class = "form-group row">
+        <lable class = "col-sm-2 col-form-label">Branch:</lable>
+        <div class=" col-sm-4">
+          {{ form.Branch }}
+        </div>
+    </div>
+
+        <div class = "form-group row">
+        <lable class = "col-sm-2 col-form-label">Mark_1:</lable>
+        <div class=" col-sm-4">
+          {{ form.mark_1 }}
+        </div>
+    </div>
+
+        <div class = "form-group row">
+        <lable class = "col-sm-2 col-form-label">Mark_2:</lable>
+        <div class=" col-sm-4">
+          {{ form.mark_2 }}
+        </div>
+    </div>
+
+        <div class = "form-group row">
+        <label class = "col-sm-1 col-form-label"></label>
+        <div class=" col-sm-4">
+        <button type = "submit" class = "btn btn-primary">Submit</button>
+        </div>
+                    <a href="/view" class="btn btn-outline-primary">View Record</a>
+
+    </div>
+          <a href="/" class="btn btn-warning">Home</a>
+
+      </div>
+
+  </form>
+</body>
+
+</html>
